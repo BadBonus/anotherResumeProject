@@ -1,5 +1,7 @@
 import React from 'react';
 
+import Languages from './../Languages/index';
+
 function Resume() {
   return (
     <div className="Resume">
@@ -16,6 +18,7 @@ function Resume() {
           <span className="Resume-addingInfo">
           On GitHub since [YEAR], [USERNAME] is a developer based in [CITY], [COUNTRY] with [XXX] public repositories and [XX] followers.
           </span>
+          <Languages />
       </div>
     </div>
   );

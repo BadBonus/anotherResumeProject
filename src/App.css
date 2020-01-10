@@ -272,7 +272,7 @@ header
   justify-content: center;
 }
 header svg {
-	padding: 19px 0 20px 0;
+	padding: 17px 0 20px 0;
 }
 
 main
@@ -315,7 +315,7 @@ form
   border-radius: 24px;
   color:
   #fff;
-  font-size: 20px;
+  font-size: 21px;
   font-family: "ubuntu";
   border:none;
   right: 36px;
@@ -326,7 +326,7 @@ form
 }
 .userInput {
 	position: relative;
-	left: 2.3vw;
+	left: 44px;
 	top: -9px;
 	max-width: 625px;
 	width: 46vw;
@@ -354,7 +354,7 @@ form
 	background: #fff;
 	max-width: 809px;
   width: 100%;
-  padding: 56px 0 0 4.7vw;
+  padding: 56px 0 0 89px;
   position: relative;
   z-index: -1;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
@@ -397,4 +397,81 @@ form
   font-size: 20px;
   max-width: 670px;
   line-height: 31px;
+}
+.Resume-title
+{
+  font-size: 28px;
+  color: #424242;
+}
+.Languages
+{
+  margin-top: 57px;
+  max-width: 736px;
+  width: 100%;
+}
+
+.Languages-content
+{
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin-top: 30px;
+  color: #EC174D;
+  font-size: 20px;
+  font-weight: lighter;
+  font-family: "open sans";
+}
+
+.Languages-content-lang
+{
+  position: relative;
+  width: 25%;
+  margin-bottom: 30px;
+}
+
+/* .Languages-content-lang::after
+{
+  content: '';
+  width: 81%;
+  display: block;
+  position: absolute;
+  height: 5px;
+  top: 35px;
+  border-radius: 100px;
+  left: -2px;
+  background-color: #D8D8D8;
+  max-width: 96px;
+} */
+
+.Languages-content-lang progress::-webkit-progress-value {
+  background: #d8d8d8 ;
+}
+.Languages-content-lang progress:-moz-progress-value {
+  background: #d8d8d8 ;
+}
+.Languages-content-lang progress::-webkit-progress-bar {
+  background: #f5f7fa ;
+}
+
+.Languages-content-lang progress
+{
+  height: 5px;
+  position: absolute;
+  left: 0;
+  bottom: -14px;
+  max-width: 170px;
+  border-radius: 100px;
+  background: #f5f7fa;
+  border:none;
+}
+
+::-moz-progress-bar
+{
+  background:#d8d8d8 !important;
+}
+
+.Languages-content-lang__decor
+{
+  color:#939393;
 }
