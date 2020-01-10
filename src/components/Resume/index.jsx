@@ -1,6 +1,7 @@
 import React from 'react';
 
 import Languages from './../Languages/index';
+import Reps from './../Reps/index';
 
 function Resume() {
   return (
@@ -19,6 +20,7 @@ function Resume() {
           On GitHub since [YEAR], [USERNAME] is a developer based in [CITY], [COUNTRY] with [XXX] public repositories and [XX] followers.
           </span>
           <Languages />
+          <Reps />
       </div>
     </div>
   );
