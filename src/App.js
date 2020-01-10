@@ -3,8 +3,10 @@ import React from 'react';
 import Header from './components/Header'
 import Form from './components/Form'
 import Resume from './components/Resume'
+import Footer from './components/Footer/index';
 
 import './App.css';
+
 
 function App() {
   return (
@@ -17,6 +19,7 @@ function App() {
         <Form />
         <Resume />
       </main>
+      <Footer />
     </>
   );
 }

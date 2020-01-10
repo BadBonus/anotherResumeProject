@@ -263,7 +263,19 @@ body
   font-family: "ubuntu";
   font-weight: bold;
   color: #434346;
+  height: 100vh;
 }
+
+#root
+{
+  height: inherit;
+  height: inherit;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+}
+
+/* header - start */
 
 header
 {
@@ -272,8 +284,10 @@ header
   justify-content: center;
 }
 header svg {
-	padding: 17px 0 20px 0;
+	padding: 18px 0 23px 0;
 }
+
+/* header - end */
 
 main
 {
@@ -281,7 +295,7 @@ main
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  padding-top: 44px;
+  padding-top: 40px;
 }
 
 h1
@@ -315,11 +329,11 @@ form
   border-radius: 24px;
   color:
   #fff;
-  font-size: 21px;
+  font-size: 20px;
   font-family: "ubuntu";
   border:none;
   right: 36px;
-  top: 21px;
+  top: 23px;
   position: relative;
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
   -webkit-box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
@@ -354,11 +368,18 @@ form
 	background: #fff;
 	max-width: 809px;
   width: 100%;
-  padding: 56px 0 0 89px;
+  padding: 56px 0 92px 89px;
   position: relative;
   z-index: -1;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  
 }
+
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+    .Resume {
+      padding-bottom: 300px;
+    }
+  }
 
 .Resume .Resume-basickInfo
 {
@@ -485,7 +506,6 @@ form
   font-weight: lighter;
 }
 
-/* repositories-end*/
 .Reps-content-item
 {
   margin-top: 28px;
@@ -542,9 +562,20 @@ form
   color:#989898;
 }
 
-.Reps-content-item:last-child::after
+/* repositories-end*/
+
+footer 
 {
-  display: none;
+	height: 26px;
+	background-color: #fff;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-family: "open sans";
+	font-weight: lighter;
+	font-size: 20px;
+	margin-top: 81px;
+	padding: 26px 0;
 }
 
 /* resume-end */
