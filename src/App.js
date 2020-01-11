@@ -1,4 +1,6 @@
-import React from 'react';
+import React, {useState, useEffect} from 'react';
+
+import service from './services'
 
 import Header from './components/Header'
 import Form from './components/Form'
@@ -7,8 +9,15 @@ import Footer from './components/Footer/index';
 
 import './App.css';
 
+const test = new service();
 
-function App() {
+
+const App = () => {
+
+  const [state, setState] = useState({});
+
+  
+
   return (
     <>
       <Header />
@@ -20,6 +29,7 @@ function App() {
         <Resume />
       </main>
       <Footer />
+      
     </>
   );
 }
