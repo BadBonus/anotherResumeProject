@@ -1,6 +1,15 @@
 import React from 'react';
 
 function Reps({data}) {
+
+  const reps = data;
+
+  function sortByStars(arr) {
+    arr.sort((a, b) => a.stargazers_count > b.stargazers_count ? -1 : 1);
+  }
+  sortByStars(reps);
+
+  reps.length=3;
   
   return (
     <div className="Reps">
@@ -9,7 +18,7 @@ function Reps({data}) {
       </span>
       <div className="Reps-content">
         {
-          data.map((el)=>
+          reps.map((el)=>
           <div className="Reps-content-item" key={el.id}>
             <div className="Reps-content-item-baseInfo">
               <span className="RepoName">
