@@ -29,8 +29,17 @@ const App = () => {
     setState({...state, userLoading:true, data:{}});
     let data = {};
     const results = await Promise.all([queryService.getUser(userName), queryService.getRepos(userName)]);
-    data = {...results[0], repos:[...results[1]]};
-    setState({...state, userLoading:false, data:{...data}});
+    if(results[0]!=="error" && results[1]!=="error")
+    {
+      data = {...results[0], repos:[...results[1]]};
+      setState({...state, userLoading:false, userError:false, data:{...data}});
+    }
+    else
+    {
+      setState({...state, userLoading:false, userError:true});
+    }
+    
+    
   };
 
   return (
@@ -57,6 +66,9 @@ const App = () => {
         }
         {
          state.userLoading&&<Loader />
+        }
+        {
+          state.userError&&<h3 className="error">OOOPS! Github don't find this user! </h3>
         }
       </main>
       <Footer />

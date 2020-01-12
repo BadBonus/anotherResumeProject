@@ -8,36 +8,41 @@ class mainService {
         const res = await fetch(__userInfo+user);
         if(!res.ok)
         {
-            throw new Error(`Could not fetch ${__userInfo+user} , received ${res.status}`)
-        }
-
-        let resModif = await res.json();
-
-        if(resModif.location ==='' && resModif.location === undefined)
-        {
-            return resModif;
+            // throw new Error(`Could not fetch ${__userInfo+user} , received ${res.status}`)
+            return "error"
         }
         else
         {
-            const countryQuery = await fetch(__country+resModif.location+'&limit=1');
-            if(!countryQuery.ok)
+            let resModif = await res.json();
+
+            if(resModif.location ==='' && resModif.location === undefined)
             {
-                resModif.country = 'no data';
+                return resModif;
             }
             else
             {
-                const country = await countryQuery.json();
-                resModif.country = country.features[0].properties.country;
+                const countryQuery = await fetch(__country+resModif.location+'&limit=1');
+                if(!countryQuery.ok)
+                {
+                    resModif.country = 'no data';
+                }
+                else
+                {
+                    const country = await countryQuery.json();
+                    resModif.country = country.features[0].properties.country;
+                }
             }
-        }
         return resModif;
+
+        }
     }
 
     async getRepos(user) {
         const res = await fetch(__userInfo+user+'/repos');
         if(!res.ok)
         {
-            throw new Error(`Could not fetch ${__userInfo+user} , received ${res.status}`)
+            // throw new Error(`Could not fetch ${__userInfo+user} , received ${res.status}`)
+            return "error"
         }
 
         return await res.json();
