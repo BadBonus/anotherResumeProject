@@ -9,7 +9,8 @@ const Form = ({createResume}) => {
     onSubmit={
       (e)=>{
         e.preventDefault();
-        createResume(name);
+        // createResume(name);
+        createResume('badbonus') //на время разработки
       }
     } 
     id="userCheck"
