@@ -34,7 +34,7 @@ class mainService {
     }
 
     async getRepos(user) {
-        const res = await fetch(__userInfo+user);
+        const res = await fetch(__userInfo+user+'/repos');
         if(!res.ok)
         {
             throw new Error(`Could not fetch ${__userInfo+user} , received ${res.status}`)
