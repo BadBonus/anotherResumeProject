@@ -3,7 +3,7 @@ import React from 'react';
 import Languages from './../Languages/index';
 import Reps from './../Reps/index';
 
-function Resume({login, bio, html_url, created_at, location, repos, followers, country}) {
+function Resume({login, bio, html_url, created_at, location, repos=[], followers, country}) {
 
   const publicReps = repos.filter((el)=>el.private===false).length;
   let setLng = new Set(repos.map((el)=>el.language));
