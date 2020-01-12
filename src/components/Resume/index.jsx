@@ -1,5 +1,4 @@
 import React from 'react';
-import {Link} from 'react'
 
 import Languages from './../Languages/index';
 import Reps from './../Reps/index';
@@ -7,8 +6,6 @@ import Reps from './../Reps/index';
 function Resume({login, bio, html_url, created_at, location, repos, followers, country}) {
 
   const publicReps = repos.filter((el)=>el.private===false).length;
-  // const setLang = new Set([repos.map((el)=>el.language)]);
-  // console.log(setLang);
   let setLng = new Set(repos.map((el)=>el.language));
   setLng.forEach((point)=>{
     if (point === null) {
@@ -23,9 +20,7 @@ function Resume({login, bio, html_url, created_at, location, repos, followers, c
   setLng.forEach((lang)=>{
     languages.push({name:lang, value: Math.round((repos.filter((el)=>el.language===lang).length / repos.length) * 100)}); //calculated % from all reps to every lang
   })
-  console.log(languages);
   sortByValue(languages);
-  console.log(languages);
 
   return (
     <div className="Resume">
@@ -48,7 +43,7 @@ function Resume({login, bio, html_url, created_at, location, repos, followers, c
           On GitHub since {created_at.slice(0,10)}, {login} is a developer based in {location}, {country} with {publicReps} public repositories and {followers} followers.
           </span>
           <Languages data={languages}/>
-          <Reps />
+          <Reps data={repos}/>
       </div>
     </div>
   );
