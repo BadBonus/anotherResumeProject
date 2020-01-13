@@ -379,6 +379,10 @@ form
     .Resume {
       padding-bottom: 300px;
     }
+    #root
+    {
+      height: 100vh;
+    }
   }
 
 .Resume .Resume-basickInfo
