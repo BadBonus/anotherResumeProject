@@ -538,6 +538,7 @@ form
   margin-top: 17px;
   width: 89%;
   line-height: 31.5px;
+  max-width: 820px;
 }
 
 .Reps-content-item::after
