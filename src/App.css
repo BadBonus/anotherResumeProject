@@ -263,13 +263,11 @@ body
   font-family: "ubuntu";
   font-weight: bold;
   color: #434346;
-  height: 100vh;
 }
 
 #root
 {
-  height: inherit;
-  height: inherit;
+  min-height: 100vh;
   display: flex;
   justify-content: space-between;
   flex-direction: column;
@@ -578,7 +576,8 @@ footer
 	font-weight: lighter;
 	font-size: 20px;
 	margin-top: 81px;
-	padding: 26px 0;
+  padding: 26px 0;
+  justify-self: flex-end;
 }
 
 /* resume-end */
